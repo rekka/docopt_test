@@ -19,7 +19,7 @@ pub struct Args {
 }
 
 fn main() {
-    let args: docopt_test::Args = docopt::Docopt::new(USAGE)
+    let args: Args = docopt::Docopt::new(USAGE)
         .and_then(|d| d.decode())
         .unwrap_or_else(|e| e.exit());
 
